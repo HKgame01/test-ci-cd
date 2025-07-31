@@ -6,10 +6,10 @@
 	"exports": {
 		"./client": "./src/index.ts"
 	},
+	"type": "module",
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"type": "commonjs",
 	"devDependencies": {
 		"@repo/typescript-config": "workspace:*",
 		"prisma": "^6.13.0"
