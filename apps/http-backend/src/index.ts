@@ -10,6 +10,13 @@ app.get("/", (req, res) => {
 	res.send("Hello World!");
 });
 
+app.get("/signup", async (req, res) => {
+	const users = await prisma.user.findMany();
+	res.json({
+		users,
+	});
+});
+
 app.post("/signup", async (req, res) => {
 	const { username, password } = req.body;
 	try {
