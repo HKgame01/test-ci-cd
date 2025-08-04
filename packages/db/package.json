@@ -14,7 +14,7 @@
 		"@repo/typescript-config": "workspace:*",
 		"prisma": "^6.13.0"
 	},
-	"dependencies": {
+	"peerDependencies": {
 		"@prisma/client": "6.13.0"
 	}
 }
