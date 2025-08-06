@@ -17,4 +17,4 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.KNOWNHOSTS }}" > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
-          ssh -t -i private_key.pem ubuntu@ec2-13-51-193-53.eu-north-1.compute.amazonaws.com 'source ~/.bashrc &&npm i -g pnpm && cd test-ci-cd && git pull origin main && cd apps/http-backend && pnpm run build && pm2 restart http && cd ../web && pnpm run build && pm2 restart next-app && cd ../ws-server && pnpm run build && pm2 restart ws'
+          ssh -t -i private_key.pem ubuntu@ec2-13-51-193-53.eu-north-1.compute.amazonaws.com 'source ~/.bashrc && cd test-ci-cd && ls'
